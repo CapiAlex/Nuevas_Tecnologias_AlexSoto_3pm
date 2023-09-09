@@ -1,28 +1,10 @@
 import random
-import re
-
-
-def validate_email(email):
-    return re.match(r'^[\w\.-]+@(gmail\.com|hotmail\.com)$', email)
-
-def validate_phone(phone):
-    return len(phone) == 10 and phone.isdigit()
 
 def register_user():
     print("Registro de Usuario")
     name = input("Nombre: ")
-    while True:
-        email = input("Email: ")
-        if not validate_email(email):
-            print("Correo inválido. Debe ser un correo de Gmail o Hotmail.")
-        else:
-            break
-    while True:
-        phone = input("Teléfono: ")
-        if not validate_phone(phone):
-            print("Número de teléfono inválido. Debe ser un número de 10 dígitos.")
-        else:
-            break
+    email = input("Email: ")
+    phone = input("Teléfono: ")
     while True:
         password = input("Contraseña: ")
         if len(password) < 8:
